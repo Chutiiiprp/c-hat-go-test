@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceScreen from '@/screens/serviceInfo'
+import ServiceScreen from '@/screens/landing'
 
 const serviceInfoPage = () => {
     return (
