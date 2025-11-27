@@ -83,9 +83,8 @@ const HeroSection = ({ badges, backgroundUrl, stats }: HeroSectionProps) => {
             {displayStats.map((stat, index) => (
               <div
                 key={`${stat.label}-${index}`}
-                className={`rounded-2xl bg-white/15 p-4 text-center shadow-inner shadow-black/10 ${
-                  hasStats ? "" : "animate-pulse"
-                }`}
+                className={`rounded-2xl bg-white/15 p-4 text-center shadow-inner shadow-black/10 ${hasStats ? "" : "animate-pulse"
+                  }`}
               >
                 <p className="text-2xl font-bold">{stat.value}</p>
                 <p className="mt-2 text-xs text-white/80">{stat.label}</p>
