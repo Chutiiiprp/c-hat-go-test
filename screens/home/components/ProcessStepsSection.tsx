@@ -27,4 +27,3 @@ const ProcessStepsSection = ({ steps }: ProcessStepsSectionProps) => (
 );
 
 export default ProcessStepsSection;
-
