@@ -68,9 +68,9 @@ export default function HeaderLayout({ children }: { children: React.ReactNode }
           </div>
         </div>
       </header>
-      <>
+      <div className="text-[#231F20]">
         {children}
-      </>
+      </div>
 
     </div>
   );

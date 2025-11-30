@@ -8,7 +8,9 @@ export default function NormalLayout({ children }: { children: React.ReactNode }
         <AntdRegistry>
             <ConfigProvider theme={theme}>
                 <HeaderLayout>
-                    {children}
+                    <div className="bg-[#F3F3F3] text-[#231F20]">
+                        {children}
+                    </div>
                 </HeaderLayout>
             </ConfigProvider>
         </AntdRegistry>

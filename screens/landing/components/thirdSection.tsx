@@ -4,58 +4,49 @@ import womanPassport from "@/public/woman-with-passport.jpg";
 
 const ThirdSection = () => {
   return (
-    <section>
-      <div className="mx-auto w-auto px-4 py-16 flex flex-col lg:flex-row justify-center items-center gap-[140px]">
-        <div className="relative w-full max-w-[550px]   ">
+    <section className="w-full my-0 mx-0 h-[440px]">
+      <div className=" static mx-auto w-[960px] py-9  flex flex-col lg:flex-row gap-[120px]">
+        <div className="relative w-[730px] h-[320px] overflow-hidden ">
           <Image
             src={womanPassport}
             alt="Travel success"
             width={732}
             height={488}
-            className="
-                w-full h-auto object-cover
+            className=" relative
+                w-[660px] h-[400px] object-cover 
                 rounded-tl-none     
                 rounded-bl-none     
-                rounded-tr-[150px] 
+                rounded-tr-[120px] 
                 rounded-br-[24px]   
             "
-            />
-
-          <div
-            className="
-              absolute -bottom-8 -right-8
-              flex h-24 w-24 flex-col items-center justify-center
-              rounded-full bg-[#1f4b7a]
-              text-xs font-semibold text-white shadow-lg
-            "
-          >
-            <span>SUCCESS</span>
-            <span className="text-lg font-bold">30K</span>
-          </div>
+          />
         </div>
 
 
-        <section className="max-w-[650px] space-y-6 lg:mt-12 text-center lg:text-left font-kanit">
-            <h1 className="text-[36px] font-bold leading-tight text-[#1a1a1a]">
-            เราทำให้การเดินทางต่างประเทศ...
-            <br />
-            <span className="text-[36px] font-bold">ง่ายเหมือนแชตกับเพื่อน</span>
-            </h1>
+        <section className="max-w-auto space-y-4 lg:mt-16 text-center lg:text-left font-kani">
+          <h1 className="text-[28px] font-medium leading-tight text-[#231F20">
+            <span className="text-[25px] mb-1 block">เราทำให้การเดินทางต่างประเทศ...</span>
+            <span className="text-[25px] font-medium ">ง่ายเหมือนแชตกับเพื่อน</span>
+          </h1>
 
-            <p className="text-[18px] font-medium text-[#4a4a4a] leading-relaxed">
-            C-hat GO คือทีมที่ปรึกษาด้านวีซ่า ที่รวมผู้เชี่ยวชาญมากประสบการณ์
-            เราช่วยคุณเตรียมเอกสารอย่างถูกต้อง ประหยัดเวลา และเพิ่มโอกาสอนุมัติ
-            </p>
+          <p className="text-[14px] font-medium text-[#4a4a4a] leading-relaxed">
+            <span>  C-hat GO คือทีมที่ปรึกษาด้านวีซ่า ที่รวมผู้เชี่ยวชาญมากประสบการณ์</span>
+            <span>เราช่วยคุณเตรียมเอกสารอย่างถูกต้อง ประหยัดเวลา และเพิ่มโอกาสอนุมัติ</span>
+          </p>
 
-            <button
+          <button
             type="button"
-            className="mt-4 text-[22px] font-medium leading-[100%] rounded-full bg-[#ff6a2e] px-10 py-3 text-white shadow-lg hover:bg-[#ff5a15] transition w-p"
-            >
+            className="mt-4 text-[18px] font-medium leading-[100%] rounded-full bg-[#ff6a2e] px-10 py-3 text-white shadow-lg hover:bg-[#ff5a15] transition w-[190px] "
+          >
             ปรึกษาฟรี
-            </button>
+          </button>
         </section>
       </div>
-    </section>
+      <div className="relative bottom-[110px] left-[420px]  justify-center items-center bg-[#2F5381] w-[120px] h-[120px] rounded-full flex flex-col">
+        <p className="text-[15px] font-medium text-white text-center italic">SUCCESS</p>
+        <p className="text-[28px] font-medium text-white text-center">30K</p>
+      </div>
+    </section >
   );
 };
 

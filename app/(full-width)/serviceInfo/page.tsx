@@ -5,6 +5,7 @@ const serviceInfoPage = () => {
     return (
         <div>
             <ServiceScreen />
+
         </div>
     )
 }
