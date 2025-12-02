@@ -45,9 +45,8 @@ const FourthSection = ({ ServiceBoxProps }: ServiceProps) => {
                   {item.list.map((listItem, listIndex) => (
                     <li
                       key={listIndex}
-                      className={`text-[12px] ${
-                        isFirstElement ? "text-white" : "text-black"
-                      }`}
+                      className={`text-[12px] ${isFirstElement ? "text-white" : "text-black"
+                        }`}
                     >
                       {listItem}
                     </li>

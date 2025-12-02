@@ -8,3 +8,10 @@ export type ServiceBoxProps = {
     title: String,
     list: String[],
 }
+
+export type CardFeedBackProps = {
+    avatar: String,
+    description: String,
+    type: String,
+    name: String,
+}
