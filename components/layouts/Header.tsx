@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const menuItems = [
-  "หน้าแรก",
-  "เกี่ยวกับเรา",
-  "บริการของเรา",
-  "ราคา",
-  "ติดตามสถานะ",
-  "ติดต่อเรา",
+  { name: "หน้าแรก", path: "/serviceInfo" },
+  { name: "เกี่ยวกับเรา", path: "/about" },
+  { name: "บริการของเรา", path: "/services" },
+  { name: "ราคา", path: "/pricing" },
+  { name: "ติดตามสถานะ", path: "/status" },
+  { name: "ติดต่อเรา", path: "/contact" },
 ];
 
 export default function HeaderLayout({ children }: { children: React.ReactNode }) {
@@ -42,13 +43,13 @@ export default function HeaderLayout({ children }: { children: React.ReactNode }
           </div>
           <nav className="hidden flex-1 items-center justify-center gap-6 text-sm font-medium text-[#6b4133] lg:flex">
             {menuItems.map((item) => (
-              <button
-                key={item}
+              <Link
+                key={item.path}
+                href={item.path}
                 className="transition-colors hover:text-[#d85d28]"
-                type="button"
               >
-                {item}
-              </button>
+                {item.name}
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-3">
@@ -67,9 +68,9 @@ export default function HeaderLayout({ children }: { children: React.ReactNode }
           </div>
         </div>
       </header>
-      <>
+      <div className="text-[#231F20]">
         {children}
-      </>
+      </div>
 
     </div>
   );
