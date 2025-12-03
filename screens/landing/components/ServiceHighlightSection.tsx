@@ -17,7 +17,7 @@ const secondSection = ({ ServiceItemProps }: ProcessProps) => {
         {ServiceItemProps.map((item, index) => (
           <div
             key={index}
-            className="w-[290px] h-[250px] bg-white/70 backdrop-blur-md   flex flex-col gap-2 justify-center items-center rounded-[24px] border-solid border border-black/2"
+            className="w-[290px] h-[250px] bg-white/70 backdrop-blur-md   flex flex-col gap-2 justify-center items-center rounded-3xl border-solid border border-black/2"
           >
             <div className="">
               <Image src={item.icons} alt="Image" width={120} height={120} />

@@ -58,7 +58,7 @@ const FeedBackSection = ({ CardProps }: CardFeedBack) => {
                     <div className='flex flex-row justify-center items-center gap-6 '>
                         {CardProps.map((item, index) => (
 
-                            <div key={index} className='flex flex-col shrink-0 min-w-[328px] justify-center items-center gap-2 p-6 bg-[white] rounded-[24px] h-60 w-82 shadow-[5px_5px_10px_0_rgba(0,0,0,0.2)] border-solid border border-[#D9D9D9]'>
+                            <div key={index} className='flex flex-col shrink-0 min-w-[328px] justify-center items-center gap-2 p-6 bg-[white] rounded-3xl h-60 w-82 shadow-[5px_5px_10px_0_rgba(0,0,0,0.2)] border-solid border border-[#D9D9D9]'>
                                 <div className='flex h-[70%] w-full '>{item.description}</div>
                                 <div className='flex h-[30%] items-center w-full border-t border-solid border-[#D9D9D9] pt-5 '>
                                     <div className='flex flex-row justify-center items-center gap-6'>

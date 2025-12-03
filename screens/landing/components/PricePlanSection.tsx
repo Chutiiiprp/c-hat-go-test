@@ -15,7 +15,7 @@ const PricePlanSection = () => {
                     </div>
 
                     <div className='flex flex-row justify-start items-center bg-[white]  w-[65%] gap-5'>
-                        <div className='flex flex-col bg-[orange] w-[300px] h-[500px] rounded-[16px] p-4'>
+                        <div className='flex flex-col bg-[orange] w-[300px] h-[500px] rounded-2xl p-4'>
                             <div className='bg-[red] '>TYPE</div>
                             <div className='text-[30px] font-bold py-5'>PRICE</div>
                             <ul className='space-y-2 bg-[blue] py-4 px-1 list-disc list-inside'>
