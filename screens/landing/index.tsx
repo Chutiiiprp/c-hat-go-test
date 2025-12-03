@@ -7,6 +7,7 @@ import ServicesOverviewSection from "./components/ServicesOverviewSection";
 import WhyTrustUsSection from "./components/WhyTrustUsSection";
 import FeedBackSection from "./components/FeedBackSection";
 import PricePlanSection from "./components/PricePlanSection";
+import QuestionSection from "./components/QuestionSection";
 
 const serviceItemProps = [
   {
@@ -111,17 +112,64 @@ const CardFeedBackProps = [
   },
 
 ]
+
+const PricePlanProps = [
+  {
+    type: "Test1",
+    price: "Test1",
+    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+  },
+  {
+    type: "Test2",
+    price: "Test2",
+    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+  },
+  {
+    type: "Test3",
+    price: "Test3",
+    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+  },
+  {
+    type: "Test4",
+    price: "Test4",
+    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+  },
+
+]
 const ServiceScreen = () => {
   return (
-    <div className="w-full relative min-h-screen">
-      <div className="relative z-10">
+    <div className="absolute w-full  min-h-full">
+      <div className=" z-0">
+        <Image
+          src="/home-page-img/Vector 2.png"
+          alt="Background"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className=" z-0">
         <HeroSection />
         <ServiceHighlightSection ServiceItemProps={serviceItemProps} />
         <WhatWeDoSection />
         <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
         <WhyTrustUsSection />
         <FeedBackSection CardProps={CardFeedBackProps} />
-        <PricePlanSection />
+        <PricePlanSection PricePlanCard={PricePlanProps} />
+
+        <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mt-22 mb-36">
+          <div className="flex flex-row justify-around items-center gap-20 w-[1000px] ">
+            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+          </div>
+        </div>
+
+        <QuestionSection />
       </div>
     </div>
   );

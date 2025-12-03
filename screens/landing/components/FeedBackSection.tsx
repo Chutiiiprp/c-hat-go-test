@@ -15,7 +15,7 @@ type CardFeedBack = {
 const FeedBackSection = ({ CardProps }: CardFeedBack) => {
     const [currentState, setCurrentState] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
-    const CARD_WIDTH = 348;
+    const CARD_WIDTH = 388;
 
     const handleNext = () => {
         if (currentState < CardProps.length - 1) {
@@ -58,8 +58,8 @@ const FeedBackSection = ({ CardProps }: CardFeedBack) => {
                     <div className='flex flex-row justify-center items-center gap-6 '>
                         {CardProps.map((item, index) => (
 
-                            <div key={index} className='flex flex-col shrink-0 min-w-[328px] justify-center items-center gap-2 p-6 bg-[white] rounded-[24px] h-60 w-82 shadow-[5px_5px_10px_0_rgba(0,0,0,0.2)] border-solid border border-[#D9D9D9]'>
-                                <div className='flex h-[70%] w-full '>{item.description}</div>
+                            <div key={index} className='flex flex-col shrink-0 min-w-[328px] justify-center items-center gap-2 p-6 bg-[white] rounded-[24px] h-[280px] w-[380px] shadow-[5px_5px_10px_0_rgba(0,0,0,0.2)] border-solid border border-[#D9D9D9]'>
+                                <div className='flex h-[70%] w-full '>"{item.description}"</div>
                                 <div className='flex h-[30%] items-center w-full border-t border-solid border-[#D9D9D9] pt-5 '>
                                     <div className='flex flex-row justify-center items-center gap-6'>
                                         <div className='flex justify-center items-center rounded-full bg-[#F6652C] w-[50px] h-[50px] text-[12px]'>
