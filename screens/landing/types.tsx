@@ -15,3 +15,10 @@ export type CardFeedBackProps = {
     type: String,
     name: String,
 }
+
+export type PricePlanProps = {
+    type: String;
+    price: String;
+    service: String[];
+    un_include: String[];
+}

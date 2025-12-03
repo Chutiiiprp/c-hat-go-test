@@ -36,7 +36,7 @@ const fifthSection = () => {
             ที่พร้อมช่วยคุณวางแผนการเดินทางให้มั่นใจทุกขั้นตอน
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-1 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-1 mb-4">
             {features.map((feature, index) => (
               <div key={index} className="text-[14px] flex items-center font-medium">
                 <span className="text-[18px] mr-2"><i className="bi bi-check-circle-fill text-[#F6652C]"></i></span>
@@ -45,13 +45,13 @@ const fifthSection = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-around sm:justify-start gap-10">
+          <div className="flex flex-wrap justify-around sm:justify-start gap-15">
             {stats.map((stat, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center justify-center  lg:w-24 lg:h-24 sm:w-21 sm:h-21 rounded-full bg-[#2F5381] text-white text-center"
               >
-                <div className="text-2xl lg:text-3xl font-bold leading-none">
+                <div className="text-2xl lg:text-3xl font-medium leading-none">
                   {stat.value}
                 </div>
               </div>
