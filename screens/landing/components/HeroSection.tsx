@@ -1,20 +1,57 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import womanPassport from "@/public/woman-with-passport.jpg";
+
+const images = [
+    "/home-page-img/Banner1.png",
+    "/home-page-img/Banner1.png",
+    "/home-page-img/Banner1.png",
+];
 
 const FirstSection = () => {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % images.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <section>
-            <div className='flex flex-col w-full min-h-screen  bg-[url(/home-page-img/airport.png)] bg-cover bg-position-[50%] justify-center items-center '>
-                <div className='static flex flex-col justify-center items-center  mb-10'>
-                    <h1 className='text-[50px]  font-bold text-white py-4  tracking-[1px]'>ขอวีซ่าไม่ยาก แค่มี C-hat GO</h1>
-                    <p className='text-[32px] font-normal  text-white    text-center '>ผู้เชี่ยวชาญด้านวีซ่าและเอกสารเดินทาง</p>
-                    <p className='text-[32px] font-normal   text-white    text-center '>ดูแลครบทุกขั้นตอน ตั้งแต่เตรียมเอกสารจนถึงได้รับอนุมัติ</p>
-                    <button type="button" className='   rounded-full bg-white px-6 py-2 text-base font-medium text-[#F6652C]  hover:bg-[#f6710c] hover:text-white transition-colors duration-400     mt-8'>ปรึกษาฟรีตอนนี้</button>
-                </div>
+        <section className="relative w-full overflow-hidden">
+
+            <div
+                className="flex transition-transform duration-1200 ease-out border-b-2 border-[]"
+                style={{
+                    transform: `translateX(-${index * 100}%)`,
+                }}
+            >
+                {images.map((src, i) => (
+                    <div key={i} className="relative w-full min-h-[650px] shrink-0">
+                        <Image
+                            src={src}
+                            alt={`banner-${i}`}
+                            fill
+                            className="object-cover"
+                            priority={i === 0}
+                        />
+                    </div>
+                ))}
             </div>
-        </section >
-    )
-}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setIndex(i)}
+                        className={`w-2 h-2 rounded-full transition-all 
+              ${i === index ? "bg-[#F6652C] scale-125" : "bg-white/50"}
+            `}
+                    />
+                ))}
+            </div>
+        </section>
+    );
+};
 
 export default FirstSection;

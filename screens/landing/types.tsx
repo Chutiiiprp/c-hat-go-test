@@ -10,15 +10,8 @@ export type ServiceBoxProps = {
 }
 
 export type CardFeedBackProps = {
-    avatar: String,
-    description: String,
-    type: String,
-    name: String,
-}
-
-export type PricePlanProps = {
-    type: String;
-    price: String;
-    service: String[];
-    un_include: String[];
+    avatar: string,
+    description: string,
+    type: string,
+    name: string,
 }
