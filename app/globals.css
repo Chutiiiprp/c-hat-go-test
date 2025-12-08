@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-kanit), "Kanit", "Helvetica Neue", Arial, sans-serif;
 }
+
+@layer utilities {
+  .minimal-scrollbar::-webkit-scrollbar {
+    height: 6px;                
+  }
+
+  .minimal-scrollbar::-webkit-scrollbar-track {
+    background: transparent !important;   
+  }
+
+  .minimal-scrollbar::-webkit-scrollbar-thumb {
+    background: #c8d0d8;        
+    border-radius: 9999px;      
+  }
+
+  .minimal-scrollbar::-webkit-scrollbar-button {
+    display: none !important;   
+  }
+}
+

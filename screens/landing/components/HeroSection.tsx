@@ -5,7 +5,7 @@ import womanPassport from "@/public/woman-with-passport.jpg";
 const FirstSection = () => {
     return (
         <section>
-            <div className='flex flex-col w-full max h-[650px] bg-[url(/home-page-img/airport.png)] bg-cover bg-[50%]] justify-center items-center '>
+            <div className='flex flex-col w-full min-h-screen  bg-[url(/home-page-img/airport.png)] bg-cover bg-position-[50%] justify-center items-center '>
                 <div className='static flex flex-col justify-center items-center  mb-10'>
                     <h1 className='text-[50px]  font-bold text-white py-4  tracking-[1px]'>ขอวีซ่าไม่ยาก แค่มี C-hat GO</h1>
                     <p className='text-[32px] font-normal  text-white    text-center '>ผู้เชี่ยวชาญด้านวีซ่าและเอกสารเดินทาง</p>

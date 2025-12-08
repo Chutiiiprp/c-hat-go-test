@@ -1,13 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
-import ServiceHighlightSection from "./components/ServiceHighlightSection";
+
 import WhatWeDoSection from "./components/WhatWeDoSection";
 import ServicesOverviewSection from "./components/ServicesOverviewSection";
-import WhyTrustUsSection from "./components/WhyTrustUsSection";
 import FeedBackSection from "./components/FeedBackSection";
-import PricePlanSection from "./components/PricePlanSection";
-import QuestionSection from "./components/QuestionSection";
+
 
 const serviceItemProps = [
   {
@@ -26,50 +24,32 @@ const serviceItemProps = [
 
 const serviceBoxProps = [
   {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Visa Services",
-    list: [
-      "วีซ่าท่องเที่ยว / ธุรกิจ / ศึกษา / คู่สมรส / ทำงาน",
-      "ต่ออายุ / วีซ่า On Arrival / Long-Term Visa",
-    ],
+    title: "บริการขอวีซ่าทุกประเภท",
+    description: "ดูแลเอกสารและขั้นตอนทุกชนิดของวีซ่า ทั้งท่องเที่ยว เรียน ทำงาน เยี่ยมคู่สมรส และวีซ่าระยะยาว",
+    image: "/home-page-img/Visa.png"
   },
   {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Thai Visa for Foreigners",
-    list: [
-      "วีซ่าสำหรับอยู่ในประเทศไทย",
-      "ต่ออายุวีซ่า, Work Permit, LTR Visa, Elite Visa",
-    ],
+    title: "บริการจดทะเบียนสมรสและเคสครอบครัว",
+    description: "ช่วยดำเนินการจดทะเบียนสมรส เคสคู่สมรส และเอกสารครอบครัวทุกประเภทอย่างถูกต้องและราบรื่น",
+    image: "/home-page-img/wedding.png"
   },
   {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Visa Services",
-    list: [
-      "บริการแรงงานต่างด้าว",
-      "พาสปอร์ต, Work Permit, รายงานตัว 90 วัน, MOU",
-    ],
+    title: "แปลและรับรองเอกสาร",
+    description: "แปลเอกสารทุกประเภท พร้อมรับรองกงสุล–สถานทูตครบจบในที่เดียว",
+    image: "/home-page-img/translate.png"
   },
   {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Translation & Legalization",
-    list: ["แปลเอกสารทุกภาษา", "รับรองเอกสารกงสุล / สถานทูต / Notary Public"],
+    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "/home-page-img/"
   },
   {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Travel & Ticket",
-    list: [
-      "จองตั๋วเครื่องบิน / โรงแรม / ประกันเดินทาง",
-      "บริการจองสำหรับองค์กร / ราชการ",
-    ],
+    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "/home-page-img/"
   },
-  {
-    icons: "/home-page-img/IconsVisa.png",
-    title: "Corporate & Legal",
-    list: [
-      "จัดการเอกสารบริษัท / นิติกรรม",
-      "สมรสต่างชาติ / จดทะเบียน / ใบขับขี่สากล",
-    ],
-  },
+
+
 ];
 
 
@@ -112,64 +92,30 @@ const CardFeedBackProps = [
   },
 
 ]
-
-const PricePlanProps = [
-  {
-    type: "Test1",
-    price: "Test1",
-    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-  },
-  {
-    type: "Test2",
-    price: "Test2",
-    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-  },
-  {
-    type: "Test3",
-    price: "Test3",
-    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-  },
-  {
-    type: "Test4",
-    price: "Test4",
-    service: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-    un_include: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
-  },
-
-]
 const ServiceScreen = () => {
   return (
-    <div className="absolute w-full  min-h-full">
-      <div className=" z-0">
-        <Image
-          src="/home-page-img/Vector 2.png"
-          alt="Background"
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div className=" z-0">
-        <HeroSection />
-        <ServiceHighlightSection ServiceItemProps={serviceItemProps} />
-        <WhatWeDoSection />
-        <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
-        <WhyTrustUsSection />
-        <FeedBackSection CardProps={CardFeedBackProps} />
-        <PricePlanSection PricePlanCard={PricePlanProps} />
-
-        <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mt-22 mb-36">
-          <div className="flex flex-row justify-around items-center gap-20 w-[1000px] ">
-            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
-            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
-            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
-            <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
-          </div>
+    <div className=" w-full min-h-screen overflow-hidden">
+      <div className=" relative flex flex-col justify-center items-center">
+        <div className="absolute top-180 left-0 w-[400px] h-[400px] z-0">
+          <Image src="/home-page-img/backgroundVector1.png" alt="Background" width={1920} height={1080} />
         </div>
-
-        <QuestionSection />
+        <div className="absolute top-670 left-110 w-[740px] h-[740px] z-0">
+          <Image src="/home-page-img/backgroundVector2.png" alt="Background" width={1920} height={1080} />
+        </div>
+        <div className="relative z-0 w-full">
+          <HeroSection />
+          <WhatWeDoSection />
+          <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
+          <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mb-45 overflow-hidden">
+            <div className="flex flex-row justify-around items-center gap-20 w-[1000px] ">
+              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
+            </div>
+          </div>
+          <FeedBackSection CardProps={CardFeedBackProps} />
+        </div>
       </div>
     </div>
   );

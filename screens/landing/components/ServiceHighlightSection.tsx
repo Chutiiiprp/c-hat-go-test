@@ -13,7 +13,7 @@ type ProcessProps = {
 const secondSection = ({ ServiceItemProps }: ProcessProps) => {
   return (
     <section className="flex flex-col max-w-[1000px] mx-auto">
-      <div className="relative bottom-[55px] my-0 mx-0  flex flex-wrap gap-10 justify-center items-center h-[230px] w-full">
+      <div className="relative bottom-[55px] my-0 mx-0  flex flex-wrap gap-10 justify-center items-center h-[230px] w-full ">
         {ServiceItemProps.map((item, index) => (
           <div
             key={index}

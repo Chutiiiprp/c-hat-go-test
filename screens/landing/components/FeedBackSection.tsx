@@ -15,7 +15,7 @@ type CardFeedBack = {
 const FeedBackSection = ({ CardProps }: CardFeedBack) => {
     const [currentState, setCurrentState] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
-    const CARD_WIDTH = 388;
+    const CARD_WIDTH = 355;
 
     const handleNext = () => {
         if (currentState < CardProps.length - 1) {
@@ -44,7 +44,7 @@ const FeedBackSection = ({ CardProps }: CardFeedBack) => {
         }
     }
     return (
-        <section className='w-full '>
+        <section className='w-full mb-40'>
             <div className='w-[1000px] mx-auto mb-6'>
                 <h2 className='text-[30px] font-medium text-center'><span className='text-[#F6652C]'>ลูกค้า</span>จริงพูดถึงเราอย่างไร</h2>
             </div>

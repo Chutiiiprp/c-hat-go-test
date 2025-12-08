@@ -1,60 +1,45 @@
 import Image from "next/image";
 type ServiceBoxProps = {
-  icons: string;
-  title: String;
-  list: Array<String>;
+  title: string;
+  description: string;
+  image: string;
 };
 type ServiceProps = {
   ServiceBoxProps: ServiceBoxProps[];
 };
 const FourthSection = ({ ServiceBoxProps }: ServiceProps) => {
   return (
-    <section className="w-full   flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-start items-start w-[1000px] space-y-8  ">
-        <div className="mx-auto w-[1000px] mb-3  flex flex-row gap-[12px]">
-          <p className="text-[30px] font-medium ">บริการครบ</p>
-          <p className="text-[30px] font-medium  text-[#F6652C]">
-            จบในที่เดียว
-          </p>
-        </div>
-
-        <div className="max-w-[1000px]  justify-start items-start flex flex-col">
-          <p className="text-[15px]">
-            ไม่ว่าคุณจะเดินทางไปที่ไหน C-hat GO
-            พร้อมดูแลตั้งแต่เริ่มต้นจนถึงปลายทาง
-            <br />
+    <section className=" mx-auto min-w-screen flex justify-center items-center mb-40">
+      <div className="flex flex-col max-w-5xl w-5xl h-full space-y-16 ">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-[30px] font-medium ">
+            บริการครบ <span className="text-[#F6652C] ">จบในที่เดียว</span>
+          </h2>
+          <p className="text-[16px] font-regular ">
+            ไม่ว่าคุณจะเดินทางไปที่ไหน C-hat GO พร้อมดูแลตั้งแต่เริ่มต้นจนถึงปลายทาง <br />
             ครอบคลุมทุกบริการด้านวีซ่า เอกสาร และการเดินทาง
           </p>
         </div>
-        <div className="w-full h-auto mt-2 grid grid-cols-3 gap-y-4 gap-x-10  mx-0 justify-center items-center">
-          {ServiceBoxProps.map((item, index) => {
-            const isFirstElement = index === 0;
-            const bgColor = isFirstElement
-              ? "bg-[#F6652C] text-white"
-              : "bg-white text-black";
-            return (
-              <div
-                key={index}
-                className={`flex flex-col gap-4 w-[320px] h-[220px] px-4 rounded-[10px] justify-center shadow-[5px_5px_10px_0_rgba(0,0,0,0.3)] ${bgColor}`}
-              >
-                <div className=" flex flex-col bg-white w-[60px] h-[60px] rounded-full justify-center items-center">
-                  <Image src={item.icons} alt="Image" width={32} height={32} />
+        <div className="flex flex-row justify-start items-center w-screen gap-6 overflow-x-scroll minimal-scrollbar p-2">
+          {ServiceBoxProps.map((item, index) => (
+            <div key={index} className="flex flex-col justify-between items-center space-y-8 bg-[white] shadow-lg p-[14px]
+          rounded-[14px] w-[380px] h-[500px]">
+              <div className="flex flex-col w-full gap-4">
+                <div className="flex flex-row justify-between items-center w-full">
+                  <h2 className="text-[20px] w-[200px] font-medium">{item.title}</h2>
+                  <i className="bi bi-arrow-up-right-circle-fill text-[30px] text-[#F6652C]"></i>
                 </div>
-                <span className="font-medium text-[15px]">{item.title}</span>
-                <ul className=" flex flex-col list-disc list-inside text-sm pl-4">
-                  {item.list.map((listItem, listIndex) => (
-                    <li
-                      key={listIndex}
-                      className={`text-[12px] ${isFirstElement ? "text-white" : "text-black"
-                        }`}
-                    >
-                      {listItem}
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <p className="text-[16px] font-regular">{item.description}</p>
+                </div>
               </div>
-            );
-          })}
+              <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-[357px] h-[290px]">
+                  <Image className="w-full h-full object-cover rounded-[14px]" src={item.image} alt="Image" width={357} height={290} />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
