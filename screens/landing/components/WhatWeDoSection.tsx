@@ -4,8 +4,8 @@ import womanPassport from "@/public/home-page-img/woman-with-passport.jpg";
 
 const ThirdSection = () => {
   return (
-    <section className=" w-full  my-0 mx-0 mb-20">
-      <div className="static mx-auto w-[1000px] max-h-[450px]  py-9 flex flex-col lg:flex-row gap-[100px]">
+    <section className=" min-w-screen my-0 mx-0 mb-30 mt-20">
+      <div className="static mx-auto w-5xl max-h-[450px]  py-9 flex flex-col lg:flex-row gap-[100px]">
 
         <div className="relative w-[820px] h-[350px]">
           <div className="w-full h-full overflow-hidden rounded-tr-[120px] rounded-br-3xl">
