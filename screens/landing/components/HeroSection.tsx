@@ -20,35 +20,36 @@ const FirstSection = () => {
 
     return (
         <section className="relative w-full overflow-hidden">
-
-            <div
-                className="flex transition-transform duration-1200 ease-out border-b-2 border-[]"
-                style={{
-                    transform: `translateX(-${index * 100}%)`,
-                }}
-            >
-                {images.map((src, i) => (
-                    <div key={i} className="relative w-full min-h-[650px] shrink-0">
-                        <Image
-                            src={src}
-                            alt={`banner-${i}`}
-                            fill
-                            className="object-cover"
-                            priority={i === 0}
-                        />
-                    </div>
-                ))}
-            </div>
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-                {images.map((_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => setIndex(i)}
-                        className={`w-2 h-2 rounded-full transition-all 
+            <div className="border-b-4 border-[#F6652C]">
+                <div
+                    className="flex transition-transform duration-1200 ease-out"
+                    style={{
+                        transform: `translateX(-${index * 100}%)`,
+                    }}
+                >
+                    {images.map((src, i) => (
+                        <div key={i} className="relative w-full min-h-[650px] shrink-0">
+                            <Image
+                                src={src}
+                                alt={`banner-${i}`}
+                                fill
+                                className="object-cover"
+                                priority={i === 0}
+                            />
+                        </div>
+                    ))}
+                </div>
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                    {images.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setIndex(i)}
+                            className={`w-2 h-2 rounded-full transition-all 
               ${i === index ? "bg-[#F6652C] scale-125" : "bg-white/50"}
             `}
-                    />
-                ))}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );

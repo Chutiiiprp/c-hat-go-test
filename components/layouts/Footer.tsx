@@ -43,18 +43,20 @@ export default function FooterLayout({
               </div>
             </div>
 
-            <div className="flex flex-row justify-start items-center gap-4 ">
-              <p className="font-regular leading-relaxed text-[14px] text-[#0A142F] opacity-50 ">
-                Social Media
-              </p>
-              <div className="flex flex-row gap-4">
-                <i className="bi bi-facebook text-[18px] text-[#F6652C]"></i>
-                <i className="bi bi-youtube text-[18px] text-[#F6652C]"></i>
-                <i className="bi bi-instagram text-[18px] text-[#F6652C]"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+                        </div>
+
+
+                        <div className='flex flex-row justify-start items-center gap-4 '>
+                            <p className='font-regular leading-relaxed text-[14px] text-[#0A142F] opacity-50 '>Social Media</p>
+                            <div className='flex flex-row gap-4'>
+                                <i className="bi bi-facebook text-[18px] text-[#F6652C]"></i>
+                                <i className="bi bi-youtube text-[18px] text-[#F6652C]"></i>
+                                <i className="bi bi-instagram text-[18px] text-[#F6652C]"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         <div className="w-full max-w-[1200px] mx-auto border-t border-[#E2E2E2] px-20 py-3">
           <div className="flex flex-row justify-between items-center w-full max-w-[1200px] mx-auto py-2 font-sans text-[14px]">
