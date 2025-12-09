@@ -11,14 +11,20 @@ const menuItems = [
   { name: "ติดต่อเรา", path: "/contact" },
 ];
 
-export default function HeaderLayout({ children }: { children: React.ReactNode }) {
+export default function HeaderLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="min-h-screen bg-[#fff8f2] text-[#231F20] m-0 p-0">
       <header className="border-b-4 border-[#F6652C] bg-white/95 relative z-10">
         <div className="mx-auto hidden w-full items-center justify-between px-[100px] py-2 text-[15px]  md:flex border-b border-[#E2E2E2]">
           <div className="flex items-center gap-2 ">
             <i className="bi bi-envelope-fill text-[#F6652C] pt-0.5   font-medium"></i>
-            <span className="font-regular text-[14px]">c-hatgo@example.com</span>
+            <span className="font-regular text-[14px]">
+              c-hatgo@example.com
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -62,10 +68,7 @@ export default function HeaderLayout({ children }: { children: React.ReactNode }
           </div>
         </div>
       </header>
-      <div className="text-[#231F20]">
-        {children}
-      </div>
-
+      <div className="text-[#231F20]">{children}</div>
     </div>
   );
 }

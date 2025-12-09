@@ -8,12 +8,12 @@ import WhyChooseSection from "./components/WhyChooseSection";
 const AboutUsPage: React.FC = () => {
   return (
     <main className="relative w-full bg-[#f7f5f2] overflow-hidden">
-      <div className="pointer-events-none absolute -top-45 left-0 z-0">
+      <div className="pointer-events-none absolute -top-58 left-0 z-0">
         <Image
           src="/aboutus-page-svg/BackgroundVector1.svg"
           alt="vector1"
-          width={320}
-          height={320}
+          width={380}
+          height={380}
           className="object-contain"
         />
       </div>

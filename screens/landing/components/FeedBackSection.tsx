@@ -1,117 +1,90 @@
 'use client'
 import Image from 'next/image';
-import React, { useState, useRef } from 'react';
+import React from 'react'
+import { useState, useRef } from 'react';
 
 type CardFeedBackProps = {
-    avatar: string,
-    description: string,
-    type: string,
-    name: string,
-}
+  avatar: string;
+  description: string;
+  type: string;
+  name: string;
+};
 
 type CardFeedBack = {
     CardProps: CardFeedBackProps[];
 }
-
 const FeedBackSection = ({ CardProps }: CardFeedBack) => {
     const [currentState, setCurrentState] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
-    const CARD_WIDTH = 340;
+    const CARD_WIDTH = 355;
 
     const handleNext = () => {
         if (currentState < CardProps.length - 1) {
-            setCurrentState(currentState + 1);
-            sliderRef.current?.scrollBy({ left: CARD_WIDTH, behavior: "smooth" });
-        }
-    };
+            const nextIndex = currentState + 1;
+            setCurrentState(nextIndex);
 
+            if (sliderRef.current) {
+                sliderRef.current.scrollBy({
+                    left: CARD_WIDTH,
+                    behavior: "smooth",
+                })
+            }
+        }
+    }
     const handlePrev = () => {
         if (currentState > 0) {
-            setCurrentState(currentState - 1);
-            sliderRef.current?.scrollBy({ left: -CARD_WIDTH, behavior: "smooth" });
+            const prevIndex = currentState - 1;
+            setCurrentState(prevIndex);
+
+            if (sliderRef.current) {
+                sliderRef.current.scrollBy({
+                    left: -CARD_WIDTH,
+                    behavior: "smooth",
+                })
+            }
         }
-    };
-
+    }
     return (
-        <section className="min-h-full mb-40 ">
-
-            <div className="max-w-[1000px] mx-auto mb-6">
-                <h2 className="text-[26px] sm:text-[30px] font-medium text-center">
-                    <span className="text-[#F6652C]">ลูกค้า</span>จริงพูดถึงเราอย่างไร
-                </h2>
+        <section className='w-full mb-40'>
+            <div className='w-[1000px] mx-auto mb-6'>
+                <h2 className='text-[30px] font-medium text-center'><span className='text-[#F6652C]'>ลูกค้า</span>จริงพูดถึงเราอย่างไร</h2>
             </div>
-
-            <div className="flex flex-row justify-center items-center gap-4 w-full h-auto py-5">
-
-
-                <div className="flex flex-col justify-center items-center mb-4 gap-6 w-[40%]  ">
-                    <button
-                        onClick={handleNext}
-                        className="bg-white rounded-full text-[#F6652C] w-[45px] h-[45px] hover:cursor-pointer shadow-md"
-                    >
-                        <i className="bi bi-arrow-right text-[25px]"></i>
-                    </button>
-
-                    <button
-                        onClick={handlePrev}
-                        className="bg-white rounded-full text-[#F6652C] w-[45px] h-[45px] hover:cursor-pointer shadow-md"
-                    >
-                        <i className="bi bi-arrow-left text-[25px]"></i>
-                    </button>
+            <div className='flex flex-row justify-center items-center w-full h-auto py-5'>
+                <div className='flex flex-col  justify-center items-center mb-4 gap-6 w-[20%]'>
+                    <button onClick={handleNext} className='bg-[white]  rounded-full text-[#F6652C] w-[45px] h-[45px] hover:cursor-pointer'><i className="bi bi-arrow-right text-[25px]"></i></button>
+                    <button onClick={handlePrev} className='bg-[white]  rounded-full text-[#F6652C] w-[45px] h-[45px] hover:cursor-pointer'><i className="bi bi-arrow-left text-[25px]"></i></button>
                 </div>
+                <div ref={sliderRef} className='flex flex-row justify-start items-center gap-4 max-w-[922px] overflow-x-scroll scroll-smooth p-5' style={{ WebkitOverflowScrolling: "touch", msOverflowStyle: "none", scrollbarWidth: "none" }}>
 
-                <div
-                    ref={sliderRef}
-                    className="
-                        flex flex-row justify-start items-center gap-6 
-                        max-w-full sm:max-w-full 
-                        overflow-x-scroll scroll-smooth p-5 no-scrollbar
-                    "
-                >
+                    <div className='flex flex-row justify-center items-center gap-6 '>
+                        {CardProps.map((item, index) => (
 
-                    {CardProps.map((item, index) => (
-                        <div
-                            key={index}
-                            className="
-                                flex flex-col shrink-0 
-                                min-w-[300px] max-w-[300px]
-                                bg-white rounded-[20px]
-                                p-6 shadow-[5px_5px_10px_0_rgba(0,0,0,0.15)]
-                                border border-[#E0E0E0]
-                                justify-between
-                                min-h-[220px] max-h-[260px]
-                            "
-                        >
+                            <div key={index} className='flex flex-col shrink-0 min-w-[328px] justify-center items-center gap-2 p-6 bg-[white] rounded-[24px] h-60 w-82 shadow-[5px_5px_10px_0_rgba(0,0,0,0.2)] border-solid border border-[#D9D9D9]'>
+                                <div className='flex h-[70%] w-full '>{item.description}</div>
+                                <div className='flex h-[30%] items-center w-full border-t border-solid border-[#D9D9D9] pt-5 '>
+                                    <div className='flex flex-row justify-center items-center gap-6'>
+                                        <div className='flex justify-center items-center rounded-full bg-[#F6652C] w-[50px] h-[50px] text-[12px]'>
+                                            {item.avatar && item.avatar.trim() !== "" && (
+                                                <Image src={item.avatar} alt="avatar" width={50} height={50} />
+                                            )}
 
-                            <div className="text-[15px] leading-relaxed line-clamp-5">
-                                {item.description}
-                            </div>
-
-
-                            <div className="flex items-center w-full border-t border-[#D9D9D9] pt-4 gap-4">
-                                <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
-                                    {item.avatar && (
-                                        <Image
-                                            src={item.avatar}
-                                            alt="avatar"
-                                            width={45}
-                                            height={45}
-                                            className="object-cover"
-                                        />
-                                    )}
-                                </div>
-                                <div className="flex flex-col text-[14px]">
-                                    <p className="font-medium">{item.type}</p>
-                                    <p className="text-gray-600">{item.name}</p>
+                                        </div>
+                                        <div className='flex flex-col '>
+                                            <p>{item.type}</p>
+                                            <p>{item.name}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
+
                 </div>
 
             </div>
-        </section>
-    );
-};
+        </section >
+    )
+}
 
 export default FeedBackSection;
