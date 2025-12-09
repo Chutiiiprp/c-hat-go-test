@@ -4,11 +4,8 @@ import React from 'react'
 export default function FooterLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className='bg-[#ffffff] '>
-            <footer className='flex flex-col justify-center items-center gap-auto  border-t-[6px] border-[#E2E2E2]'>
-
-
+            <footer className='flex flex-col justify-center items-center gap-auto  border-t-[6px] border-[#E2E2E2] relative z-10'>
                 <div className='flex flex-row justify-start items-center gap-40 h-[220px] w-full max-w-[1200px] pl-30'>
-
                     <div>
                         <Image src={"/footer-img/logo.png"} alt="Image" width={242} height={120} />
                     </div>
