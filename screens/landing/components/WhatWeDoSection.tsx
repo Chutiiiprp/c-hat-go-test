@@ -7,13 +7,13 @@ const ThirdSection = () => {
     <section className=" min-w-screen my-0 mx-0 mb-30 mt-20">
       <div className="static mx-auto w-5xl max-h-[450px]  py-9 flex flex-col lg:flex-row gap-[100px]">
 
-        <div className="relative w-[820px] h-[350px]">
+        <div className="relative w-[650px] h-[300px]">
           <div className="w-full h-full overflow-hidden rounded-tr-[120px] rounded-br-3xl">
             <Image
               src={womanPassport}
               alt="Travel success"
-              width={732}
-              height={350}
+              width={650}
+              height={300}
               className="w-full h-full object-cover"
             />
           </div>

@@ -41,12 +41,12 @@ const serviceBoxProps = [
   {
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "/home-page-img/"
+    image: ""
   },
   {
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "/home-page-img/"
+    image: ""
   },
 
 
@@ -55,58 +55,56 @@ const serviceBoxProps = [
 
 const CardFeedBackProps = [
   {
-    avatar: "Test1",
-    description: "Test1",
-    type: "Test1",
-    name: "Test1",
+    avatar: "/home-page-img/profile1.png",
+    description: "บริการดีมาก ทีมให้คำปรึกษาละเอียดจนได้วีซ่าผ่านง่ายกว่าที่คิด!",
+    type: "วีซ่าญี่ปุ่น",
+    name: "คุณฝน ",
   },
   {
-    avatar: "Test2",
-    description: "Test2",
-    type: "Test2",
-    name: "Test2",
+    avatar: "/home-page-img/profile2.png",
+    description: "ทำวีซ่าทำงานได้เร็ว ประหยัดเวลาสุด ๆ",
+    type: "Work Visa Thailand",
+    name: "Mr. John",
   },
   {
-    avatar: "Test3",
-    description: "Test3",
-    type: "Test3",
-    name: "Test3",
+    avatar: "/home-page-img/profile3.png",
+    description: "การให้บริการเป็นเลิศ ทุกขั้นตอนมีความชัดเจน ช่วยให้ได้วีซ่าภายในเวลาอันสั้น!",
+    type: "วีซ่าอเมริกา",
+    name: "คุณนัท",
   },
   {
-    avatar: "Test4",
-    description: "Test4",
-    type: "Test4",
-    name: "Test4",
+    avatar: "",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    type: "lorem ipsum dolor",
+    name: "lorem ipsum dolor",
   },
   {
-    avatar: "Test5",
-    description: "Test5",
-    type: "Test5",
-    name: "Test5",
+    avatar: "",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    type: "lorem ipsum dolor",
+    name: "lorem ipsum dolor",
   },
-  {
-    avatar: "Test6",
-    description: "Test6",
-    type: "Test6",
-    name: "Test6",
-  },
+
 
 ]
 const ServiceScreen = () => {
   return (
     <div className=" w-full min-h-screen overflow-hidden">
       <div className=" relative flex flex-col justify-center items-center">
-        <div className="absolute top-180 left-0 w-[400px] h-[400px] z-0">
+        <div className="absolute top-180 left-0 w-[400px] h-[400px] z-10">
           <Image src="/home-page-img/backgroundVector1.png" alt="Background" width={1920} height={1080} />
         </div>
-        <div className="absolute top-670 left-110 w-[740px] h-[740px] z-0">
+        <div className="absolute top-287 left-0 w-[1250px] h-[1250px] z-0">
+          <Image src="/home-page-img/background.png" alt="Background" width={1920} height={1080} />
+        </div>
+        <div className="absolute top-670 left-110 w-[740px] h-[740px] z-10">
           <Image src="/home-page-img/backgroundVector2.png" alt="Background" width={1920} height={1080} />
         </div>
-        <div className="relative z-0 w-full">
+        <div className="relative z-10 w-full">
           <HeroSection />
           <WhatWeDoSection />
           <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
-          <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mb-45 overflow-hidden">
+          <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mb-30 overflow-hidden">
             <div className="flex flex-row justify-around items-center gap-20 w-[1000px] ">
               <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>
               <div className=" h-[67px] w-[154px] bg-[#999999] rounded-[16px]"></div>

@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React from 'react'
 import { useState, useRef } from 'react';
 
@@ -63,7 +64,9 @@ const FeedBackSection = ({ CardProps }: CardFeedBack) => {
                                 <div className='flex h-[30%] items-center w-full border-t border-solid border-[#D9D9D9] pt-5 '>
                                     <div className='flex flex-row justify-center items-center gap-6'>
                                         <div className='flex justify-center items-center rounded-full bg-[#F6652C] w-[50px] h-[50px] text-[12px]'>
-                                            {item.avatar}
+                                            {item.avatar && item.avatar.trim() !== "" && (
+                                                <Image src={item.avatar} alt="avatar" width={50} height={50} />
+                                            )}
 
                                         </div>
                                         <div className='flex flex-col '>

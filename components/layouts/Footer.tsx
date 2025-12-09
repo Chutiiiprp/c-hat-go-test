@@ -21,31 +21,28 @@ export default function FooterLayout({ children }: { children: React.ReactNode }
                             </div>
 
 
-                            <div className='flex flex-row gap-10'>
+                            <div className='flex flex-row justify-between items-center
+                             gap-10'>
                                 <div className='flex gap-3'>
-                                    <i className="bi bi-telephone-fill text-[16px] text-[#F6652C]"></i>
-                                    <p className='text-[14px]'>(123) 456-7890</p>
+                                    <i className="bi bi-telephone-fill text-[14px] text-[#F6652C]"></i>
+                                    <p className='text-[14px] opacity-50'> (123) 456-7890</p>
                                 </div>
                                 <div className='flex gap-3'>
-                                    <i className="bi bi-printer-fill text-[16px] text-[#F6652C]"></i>
-                                    <p className='text-[14px]'>(123) 456-7890</p>
+                                    <i className="bi bi-printer-fill text-[14px] text-[#F6652C]"></i>
+                                    <p className='text-[14px] opacity-50'> (123) 456-7890</p>
                                 </div>
                             </div>
 
                         </div>
 
 
-                        <div className='flex flex-row gap-4 items-center'>
-                            <p className='font-medium'>Social</p>
+                        <div className='flex flex-row justify-start items-center gap-4 '>
+                            <p className='font-regular leading-relaxed text-[14px] text-[#0A142F] opacity-50 '>Social Media</p>
                             <div className='flex flex-row gap-4'>
-                                <i className="bi bi-facebook text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-twitter text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-linkedin text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-youtube text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-instagram text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-google text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-pinterest text-[16px] text-[#F6652C]"></i>
-                                <i className="bi bi-rss-fill text-[16px] text-[#F6652C]"></i>
+                                <i className="bi bi-facebook text-[18px] text-[#F6652C]"></i>
+                                <i className="bi bi-youtube text-[18px] text-[#F6652C]"></i>
+                                <i className="bi bi-instagram text-[18px] text-[#F6652C]"></i>
+
                             </div>
                         </div>
                     </div>
