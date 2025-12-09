@@ -4,7 +4,7 @@ import ServiceScreen from '@/screens/contactus'
 
 const ContactUsPage = () => {
 return (
-    <div className="w-full">
+    <div className="">
         <ServiceScreen />
     </div>
   )
