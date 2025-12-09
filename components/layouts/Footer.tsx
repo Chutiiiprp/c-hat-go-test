@@ -41,7 +41,7 @@ export default function FooterLayout({ children }: { children: React.ReactNode }
 
                         <div className='flex flex-row justify-start items-center gap-4 '>
                             <p className='font-regular leading-relaxed text-[14px] text-[#0A142F] opacity-50 '>Social Media</p>
-                            <div className='flex flex-row gap-4'>
+                            <div className='flex flex-row gap-6'>
                                 <i className="bi bi-facebook text-[18px] text-[#F6652C]"></i>
                                 <i className="bi bi-youtube text-[18px] text-[#F6652C]"></i>
                                 <i className="bi bi-instagram text-[18px] text-[#F6652C]"></i>
