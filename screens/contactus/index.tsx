@@ -14,7 +14,7 @@ const ContactUsPage = () => {
           className="object-contain"
         />
       </div>
-      <div className="relative ">
+      <div className="relative z-0">
         <div className="pointer-events-none absolute -bottom-60 right-0 z-0">
           <Image
             src="/aboutus-page-svg/BackgroundVector2.svg"
