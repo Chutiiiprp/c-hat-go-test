@@ -1,24 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
-
 import WhatWeDoSection from "./components/WhatWeDoSection";
 import ServicesOverviewSection from "./components/ServicesOverviewSection";
 import FeedBackSection from "./components/FeedBackSection";
 
 const serviceItemProps = [
-  {
-    icons: "/home-page-img/Chat.png",
-    title: "ปรึกษาฟรีกับผู้เชี่ยวชาญ",
-  },
-  {
-    icons: "/home-page-img/Board.png",
-    title: "ส่งเอกสารที่ช่วยตรวจสอบให้ครบ",
-  },
-  {
-    icons: "/home-page-img/Docs.png",
-    title: "ยื่นขอและรอรับผลได้เลย",
-  },
+  { icons: "/home-page-img/Chat.png", title: "ปรึกษาฟรีกับผู้เชี่ยวชาญ" },
+  { icons: "/home-page-img/Board.png", title: "ส่งเอกสารที่ช่วยตรวจสอบให้ครบ" },
+  { icons: "/home-page-img/Docs.png", title: "ยื่นขอและรอรับผลได้เลย" },
 ];
 
 const serviceBoxProps = [
@@ -40,12 +30,12 @@ const serviceBoxProps = [
     image: "/home-page-img/translate.png",
   },
   {
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Lorem ipsum dolor sit amet consectetur.",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: "",
   },
   {
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Lorem ipsum dolor sit amet consectetur.",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: "",
   },
@@ -54,8 +44,7 @@ const serviceBoxProps = [
 const CardFeedBackProps = [
   {
     avatar: "/home-page-img/profile1.png",
-    description:
-      "บริการดีมาก ทีมให้คำปรึกษาละเอียดจนได้วีซ่าผ่านง่ายกว่าที่คิด!",
+    description: "บริการดีมาก ทีมให้คำปรึกษาละเอียดจนได้วีซ่าผ่านง่ายกว่าที่คิด!",
     type: "วีซ่าญี่ปุ่น",
     name: "คุณฝน ",
   },
@@ -68,65 +57,70 @@ const CardFeedBackProps = [
   {
     avatar: "/home-page-img/profile3.png",
     description:
-      "การให้บริการเป็นเลิศ ทุกขั้นตอนมีความชัดเจน ช่วยให้ได้วีซ่าภายในเวลาอันสั้น!",
+      "บริการดีมาก ทุกขั้นตอนชัดเจน ช่วยให้ได้วีซ่าภายในเวลาอันสั้น!",
     type: "วีซ่าอเมริกา",
     name: "คุณนัท",
   },
-  {
-    avatar: "",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    type: "lorem ipsum dolor",
-    name: "lorem ipsum dolor",
-  },
-  {
-    avatar: "",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    type: "lorem ipsum dolor",
-    name: "lorem ipsum dolor",
-  },
 ];
+
 const ServiceScreen = () => {
   return (
-    <div className=" w-full min-h-screen overflow-hidden">
-      <div className=" relative flex flex-col justify-center items-center">
-        <div className="absolute top-180 left-0 w-[400px] h-[400px] z-10">
-          <Image
-            src="/home-page-img/backgroundVector1.png"
-            alt="Background"
-            width={1920}
-            height={1080}
-          />
+    <div className="w-full min-h-screen overflow-hidden relative">
+      {/* Background Images */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+        {/* Vector 1 */}
+        <Image
+          src="/home-page-img/backgroundVector1.png"
+          alt="bg"
+          width={400}
+          height={400}
+          className="absolute top-20 left-0 opacity-80
+                     max-md:w-[250px] max-md:top-10"
+        />
+
+        {/* Big background circle */}
+        <Image
+          src="/home-page-img/background.png"
+          alt="bg"
+          width={1200}
+          height={1200}
+          className="absolute top-40 left-[-200px] opacity-60
+                     max-lg:w-[900px] max-md:w-[700px] max-md:left-[-150px]"
+        />
+
+        {/* Vector 2 */}
+        <Image
+          src="/home-page-img/backgroundVector2.png"
+          alt="bg"
+          width={700}
+          height={700}
+          className="absolute top-[2350px] right-[-70] opacity-80
+                     max-xl:w-[750px] max-md:hidden"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center w-full ">
+
+        <HeroSection />
+        <WhatWeDoSection />
+        <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
+
+        {/* Sponsor / partner section */}
+        <div className="flex flex-wrap justify-center items-center gap-35 
+                        w-full py-10 bg-[#D8D8D8] my-5 mb-30">
+
+          {[1, 2, 3, 4].map((_, i) => (
+            <div
+              key={i}
+              className="h-[60px] w-[130px] bg-[#999] rounded-2xl
+                         max-sm:w-[110px]"
+            ></div>
+          ))}
         </div>
-        <div className="absolute top-287 left-0 w-[1250px] h-[1250px] z-0">
-          <Image
-            src="/home-page-img/background.png"
-            alt="Background"
-            width={1920}
-            height={1080}
-          />
-        </div>
-        <div className="absolute top-670 left-110 w-[740px] h-[740px] z-10">
-          <Image
-            src="/home-page-img/backgroundVector2.png"
-            alt="Background"
-            width={1920}
-            height={1080}
-          />
-        </div>
-        <div className="relative z-10 w-full">
-          <HeroSection />
-          <WhatWeDoSection />
-          <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
-          <div className="flex flex-row justify-around items-center w-full h-[200px]  bg-[#D8D8D8] mb-30 overflow-hidden">
-            <div className="flex flex-row justify-around items-center gap-20 w-[1000px] ">
-              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-2xl"></div>
-              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-2xl"></div>
-              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-2xl"></div>
-              <div className=" h-[67px] w-[154px] bg-[#999999] rounded-2xl"></div>
-            </div>
-          </div>
-          <FeedBackSection CardProps={CardFeedBackProps} />
-        </div>
+
+        <FeedBackSection CardProps={CardFeedBackProps} />
       </div>
     </div>
   );
