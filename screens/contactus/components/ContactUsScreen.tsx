@@ -12,7 +12,7 @@ const ContactUsScreen: React.FC = () => {
       </div>
 
       <div className="mx-auto max-w-7xl flex flex-col lg:flex-row gap-6 lg:gap-14">
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[40%] py-13">
           <ContactInfoBlock />
         </div>
         <div className="w-full lg:w-[60%]">
