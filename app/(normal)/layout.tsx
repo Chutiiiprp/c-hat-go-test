@@ -3,14 +3,16 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import theme from "@/theme/themeConfig";
 import React from 'react'
 import { ConfigProvider } from "antd";
+import FooterLayout from "@/components/layouts/Footer";
 export default function NormalLayout({ children }: { children: React.ReactNode }) {
     return (
         <AntdRegistry>
             <ConfigProvider theme={theme}>
                 <HeaderLayout>
-                    <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 py-12 sm:py-16">
+                    <div className="bg-[#F3F3F3] text-[#231F20]">
                         {children}
-                    </main>
+                    </div>
+                    <FooterLayout children={undefined} />
                 </HeaderLayout>
             </ConfigProvider>
         </AntdRegistry>

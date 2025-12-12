@@ -1,7 +1,13 @@
-import HomeScreen from "@/screens/home";
+import React from 'react'
+import ServiceScreen from '@/screens/landing'
 
-const Home = () => {
-  return <HomeScreen />;
-};
+const serviceInfoPage = () => {
+    return (
+        <div>
+            <ServiceScreen />
 
-export default Home;
+        </div>
+    )
+}
+
+export default serviceInfoPage

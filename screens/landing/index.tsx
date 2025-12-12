@@ -44,7 +44,8 @@ const serviceBoxProps = [
 const CardFeedBackProps = [
   {
     avatar: "/home-page-img/profile1.png",
-    description: "บริการดีมาก ทีมให้คำปรึกษาละเอียดจนได้วีซ่าผ่านง่ายกว่าที่คิด!",
+    description:
+      "บริการดีมาก ทีมให้คำปรึกษาละเอียดจนได้วีซ่าผ่านง่ายกว่าที่คิด!",
     type: "วีซ่าญี่ปุ่น",
     name: "คุณฝน ",
   },
@@ -66,61 +67,65 @@ const CardFeedBackProps = [
 const ServiceScreen = () => {
   return (
     <div className="w-full min-h-screen overflow-hidden relative">
-      {/* Background Images */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
-        {/* Vector 1 */}
         <Image
           src="/home-page-img/backgroundVector1.png"
           alt="bg"
           width={400}
           height={400}
-          className="absolute top-20 left-0 opacity-80
+          className="absolute top-[28%] left-0 opacity-80
                      max-md:w-[250px] max-md:top-10"
         />
 
-        {/* Big background circle */}
         <Image
           src="/home-page-img/background.png"
           alt="bg"
           width={1200}
           height={1200}
-          className="absolute top-40 left-[-200px] opacity-60
-                     max-lg:w-[900px] max-md:w-[700px] max-md:left-[-150px]"
+          className="absolute top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-60
+                     max-lg:w-[900px] max-md:w-[700px] max-md:left-[-150px] xl:w-[1500px] 2xl:w-full 2xl:h-[1000px]"
         />
 
-        {/* Vector 2 */}
         <Image
           src="/home-page-img/backgroundVector2.png"
           alt="bg"
           width={700}
           height={700}
-          className="absolute top-[2350px] right-[-70] opacity-80
-                     max-xl:w-[750px] max-md:hidden"
+          className="absolute top-[2350px] right-[-200px] opacity-80
+                     max-xl:w-[750px] max-md:hidden md:w-[2500px] md:h-[1500px] md:top-[2600px] md:right-[-240px] lg:w-[2500px] lg:h-[2000px] lg:top-[2100px] lg:right-[-400px] 
+                     xl:right-[-700px] xl:w-[1800px] xl:h-[2500px] xl:top-[2000px] 2xl:w-[1500px] "
         />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center w-full ">
-
         <HeroSection />
+
         <WhatWeDoSection />
         <ServicesOverviewSection ServiceBoxProps={serviceBoxProps} />
 
-        {/* Sponsor / partner section */}
-        <div className="flex flex-wrap justify-center items-center gap-35 
-                        w-full py-10 bg-[#D8D8D8] my-5 mb-30">
-
+        <div
+          className="relative flex flex-wrap justify-center items-center gap-35 
+             w-full py-10 bg-[#D8D8D8] my-5 mb-30 "
+        >
           {[1, 2, 3, 4].map((_, i) => (
             <div
               key={i}
-              className="h-[60px] w-[130px] bg-[#999] rounded-2xl
-                         max-sm:w-[110px]"
+              className="h-[60px] w-[130px] bg-[#999] rounded-2xl max-sm:w-[110px]"
             ></div>
           ))}
         </div>
 
         <FeedBackSection CardProps={CardFeedBackProps} />
+      </div>
+
+      <div className="fixed bottom-[50%] right-10  z-50 translate-y-1/2">
+        <button
+          className="flex items-center justify-center bg-[#F6652C] text-white
+               w-18 h-18 rounded-full shadow-lg shadow-[#ff6a2e]/40 
+               hover:scale-110 hover:bg-[#ff5a15] transition-all duration-300"
+        >
+          <i className="bi bi-chat-dots text-3xl "></i>
+        </button>
       </div>
     </div>
   );
